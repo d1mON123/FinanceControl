@@ -1,10 +1,11 @@
 ﻿using FinanceControlDAL.Repos;
 using System;
 using System.Windows.Forms;
+using FinanceControlApp.Classes;
 
 namespace FinanceControlApp.Forms
 {
-    public partial class DetInfoForm : Form
+    public partial class DetInfoForm : Form, IDetails
     {
         private readonly int _typeOfData;
         private readonly int _id;
@@ -15,7 +16,7 @@ namespace FinanceControlApp.Forms
             _id = id;
         }
 
-        private void DetInfoForm_Load(object sender, EventArgs e)
+        public void DetInfoForm_Load(object sender, EventArgs e)
         {
             if (_typeOfData == 1)
             {
@@ -48,7 +49,7 @@ namespace FinanceControlApp.Forms
                     valieBox.Text = o.Value.ToString();
                     commentBox.Text = o.Comment;
                 }
-                
+
             }
         }
     }

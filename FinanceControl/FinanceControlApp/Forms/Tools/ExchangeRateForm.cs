@@ -1,20 +1,21 @@
 ﻿using FinanceControlExchangeLib;
 using System;
 using System.Windows.Forms;
+using FinanceControlApp.Classes;
 
 namespace FinanceControlApp.Forms
 {
-    public partial class ExchangeRateForm : Form
+    public partial class ExchangeRateForm : Form, IExchange
     {
         public ExchangeRateForm()
         {
             InitializeComponent();
         }
 
-        private void ExchangeRateForm_Load(object sender, EventArgs e)
+        public void ExchangeRateForm_Load(object sender, EventArgs e)
         {
-            var firstList = CurrencyRates.GetExchangeRates();
-            var secondList = CurrencyRates.GetExchangeRates();
+            var firstList = new CurrencyRates().GetExchangeRates();
+            var secondList = new CurrencyRates().GetExchangeRates();
             foreach (var item in firstList)
             {
                 textBox1.AppendText(item.GetString() + "\n");
@@ -35,7 +36,7 @@ namespace FinanceControlApp.Forms
             secondCurrencyBox.DataSource = secondList;
         }
 
-        private void PerformButton_Click(object sender, EventArgs e)
+        public void PerformButton_Click(object sender, EventArgs e)
         {
             if (ValueBox.Text == "" || firstCurrencyBox.SelectedItem == null || secondCurrencyBox.SelectedItem == null) return;
             var firstValue = double.Parse(ValueBox.Text);

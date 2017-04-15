@@ -1,4 +1,5 @@
-﻿using FinanceControlDAL.Models;
+﻿using FinanceControlApp.Classes;
+using FinanceControlDAL.Models;
 using FinanceControlDAL.Repos;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Windows.Forms;
 
 namespace FinanceControlApp.Forms
 {
-    public partial class AccountStatsForm : Form
+    public partial class AccountStatsForm : Form, IStats
     {
         private int _currentMonth;
 
@@ -19,24 +20,24 @@ namespace FinanceControlApp.Forms
             "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"
         };
 
-        private int _typeOfData;
+        private readonly int _typeOfData;
 
         public AccountStatsForm(int typeOfData)
         {
             InitializeComponent();
             _typeOfData = typeOfData;
-            if(_typeOfData==1) this.Text += " (Дохід)";
+            if (_typeOfData == 1) this.Text += " (Дохід)";
             else this.Text += " (Витрати)";
         }
 
-        private void AccountStatsForm_Load(object sender, EventArgs e)
+        public void StatsForm_Load(object sender, EventArgs e)
         {
             var dt = DateTime.Now;
             currMonthLabel.Text = _monthArray[dt.Month - 1] + " " + dt.Year;
             UpdateForm();
         }
 
-        private void UpdateForm()
+        public void UpdateForm()
         {
             string month = currMonthLabel.Text.Substring(0, (currMonthLabel.Text.Length - 5));
             string year = currMonthLabel.Text.Substring(currMonthLabel.Text.Length - 4);
@@ -104,7 +105,7 @@ namespace FinanceControlApp.Forms
             chart2.Series["Series1"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
         }
 
-        private void prevMonthButton_Click(object sender, EventArgs e)
+        public void prevMonthButton_Click(object sender, EventArgs e)
         {
             string month = currMonthLabel.Text.Substring(0, (currMonthLabel.Text.Length - 5));
             string year = currMonthLabel.Text.Substring(currMonthLabel.Text.Length - 4);
@@ -126,7 +127,7 @@ namespace FinanceControlApp.Forms
             UpdateForm();
         }
 
-        private void nextMonthButton_Click(object sender, EventArgs e)
+        public void nextMonthButton_Click(object sender, EventArgs e)
         {
             string month = currMonthLabel.Text.Substring(0, (currMonthLabel.Text.Length - 5));
             string year = currMonthLabel.Text.Substring(currMonthLabel.Text.Length - 4);

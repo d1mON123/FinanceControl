@@ -158,7 +158,7 @@
             this.Name = "AccountStatsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Статистика по рахунках";
-            this.Load += new System.EventHandler(this.AccountStatsForm_Load);
+            this.Load += new System.EventHandler(this.StatsForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using FinanceControlApp.Classes;
 using FinanceControlDAL.Models;
 using FinanceControlDAL.Repos;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace FinanceControlApp.Forms
 {
-    public partial class PersonStatsForm : Form
+    public partial class PersonStatsForm : Form, IStats
     {
         private int _currentMonth;
 
@@ -24,7 +21,7 @@ namespace FinanceControlApp.Forms
             "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"
         };
 
-        private int _typeOfData;
+        private readonly int _typeOfData;
 
         public PersonStatsForm(int typeOfData)
         {
@@ -34,7 +31,14 @@ namespace FinanceControlApp.Forms
             else this.Text += " (Витрати)";
         }
 
-        private void UpdateForm()
+        public void StatsForm_Load(object sender, EventArgs e)
+        {
+            var dt = DateTime.Now;
+            currMonthLabel.Text = _monthArray[dt.Month - 1] + " " + dt.Year;
+            UpdateForm();
+        }
+
+        public void UpdateForm()
         {
             string month = currMonthLabel.Text.Substring(0, (currMonthLabel.Text.Length - 5));
             string year = currMonthLabel.Text.Substring(currMonthLabel.Text.Length - 4);
@@ -55,14 +59,14 @@ namespace FinanceControlApp.Forms
                         (x.Month == monthQuery && x.Year == yearQuery));
                 }
                 var list = (from a in incomeList
-                            from b in personList
-                            where (a.Person_ID == b.ID)
-                            select
-                            new
-                            {
-                                Name = b.Name,
-                                Sum = (from m in incomeList where m.Person_ID == b.ID select m.Value).Sum()
-                            })
+                        from b in personList
+                        where (a.Person_ID == b.ID)
+                        select
+                        new
+                        {
+                            Name = b.Name,
+                            Sum = (from m in incomeList where m.Person_ID == b.ID select m.Value).Sum()
+                        })
                     .Distinct().ToList();
                 chart1.DataSource = list;
                 chart2.DataSource = list;
@@ -76,14 +80,14 @@ namespace FinanceControlApp.Forms
                         (x.Month == monthQuery && x.Year == yearQuery));
                 }
                 var list = (from a in outlayList
-                            from b in personList
-                            where (a.Person_ID == b.ID)
-                            select
-                            new
-                            {
-                                Name = b.Name,
-                                Sum = (from m in outlayList where m.Person_ID == b.ID select m.Value).Sum()
-                            })
+                        from b in personList
+                        where (a.Person_ID == b.ID)
+                        select
+                        new
+                        {
+                            Name = b.Name,
+                            Sum = (from m in outlayList where m.Person_ID == b.ID select m.Value).Sum()
+                        })
                     .Distinct().ToList();
                 chart1.DataSource = list;
                 chart2.DataSource = list;
@@ -102,14 +106,7 @@ namespace FinanceControlApp.Forms
             chart2.Series["Series1"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
         }
 
-        private void PersonStatsForm_Load(object sender, EventArgs e)
-        {
-            var dt = DateTime.Now;
-            currMonthLabel.Text = _monthArray[dt.Month - 1] + " " + dt.Year;
-            UpdateForm();
-        }
-
-        private void prevMonthButton_Click(object sender, EventArgs e)
+        public void prevMonthButton_Click(object sender, EventArgs e)
         {
             string month = currMonthLabel.Text.Substring(0, (currMonthLabel.Text.Length - 5));
             string year = currMonthLabel.Text.Substring(currMonthLabel.Text.Length - 4);
@@ -131,7 +128,7 @@ namespace FinanceControlApp.Forms
             UpdateForm();
         }
 
-        private void nextMonthButton_Click(object sender, EventArgs e)
+        public void nextMonthButton_Click(object sender, EventArgs e)
         {
             string month = currMonthLabel.Text.Substring(0, (currMonthLabel.Text.Length - 5));
             string year = currMonthLabel.Text.Substring(currMonthLabel.Text.Length - 4);

@@ -83,7 +83,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Editing\IPerformOperation.cs" />
     <Compile Include="Classes\ITest.cs" />
+    <Compile Include="Classes\Others\IDetails.cs" />
+    <Compile Include="Classes\Stats\IStats.cs" />
+    <Compile Include="Classes\Tools\IExchange.cs" />
     <Compile Include="Forms\Dictionaries\AccountDictionaryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,12 +155,6 @@
     <Compile Include="Forms\Stats\TypeStatsForm.Designer.cs">
       <DependentUpon>TypeStatsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Tools\ExportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Tools\ExportForm.Designer.cs">
-      <DependentUpon>ExportForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Dictionaries\AddPersonForm.resx">
       <DependentUpon>AddPersonForm.cs</DependentUpon>
@@ -187,9 +185,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Stats\TypeStatsForm.resx">
       <DependentUpon>TypeStatsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tools\ExportForm.resx">
-      <DependentUpon>ExportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

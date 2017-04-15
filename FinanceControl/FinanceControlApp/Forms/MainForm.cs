@@ -230,14 +230,6 @@ namespace FinanceControlApp.Forms
             }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            using (var form = new ExportForm())
-            {
-                form.ShowDialog();
-            }
-        }
-
         private void поРахункахToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (var form = new AccountStatsForm(1))

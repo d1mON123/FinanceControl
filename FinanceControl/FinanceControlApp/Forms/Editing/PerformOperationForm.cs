@@ -1,20 +1,20 @@
-﻿using FinanceControlDAL.Models;
+﻿using FinanceControlApp.Classes;
+using FinanceControlDAL.Models;
 using FinanceControlDAL.Repos;
 using System;
-using System.Transactions;
 using System.Windows.Forms;
 using Type = FinanceControlDAL.Models.Type;
 
 namespace FinanceControlApp.Forms
 {
-    public partial class PerformOperationForm : Form
+    public partial class PerformOperationForm : Form, IPerformOperation
     {
         public PerformOperationForm()
         {
             InitializeComponent();
         }
 
-        private void Form_Load(object sender, EventArgs e)
+        public void Form_Load(object sender, EventArgs e)
         {
             using (var repo = new AccountRepo())
             {
@@ -35,7 +35,7 @@ namespace FinanceControlApp.Forms
             outlayDatePicker.Value = DateTime.Now;
         }
 
-        private void incomeAddButton_Click(object sender, EventArgs e)
+        public void incomeAddButton_Click(object sender, EventArgs e)
         {
             var a = incomeAccountComboBox.SelectedItem as Account;
             var p = incomePersonComboBox.SelectedItem as Person;
@@ -62,7 +62,7 @@ namespace FinanceControlApp.Forms
             }
         }
 
-        private void outlayAddButton_Click(object sender, EventArgs e)
+        public void outlayAddButton_Click(object sender, EventArgs e)
         {
             var a = outlayAccountComboBox.SelectedItem as Account;
             var p = outlayPersonComboBox.SelectedItem as Person;

@@ -156,7 +156,7 @@
             this.Name = "TypeStatsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TypeStatsForm";
-            this.Load += new System.EventHandler(this.TypeStatsForm_Load);
+            this.Load += new System.EventHandler(this.StatsForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
