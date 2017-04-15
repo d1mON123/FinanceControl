@@ -83,6 +83,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Dictionaries\IDictionary.cs" />
+    <Compile Include="Classes\Dictionaries\IDictionaryEdit.cs" />
     <Compile Include="Classes\Editing\IPerformOperation.cs" />
     <Compile Include="Classes\ITest.cs" />
     <Compile Include="Classes\Others\IDetails.cs" />
@@ -94,11 +96,23 @@
     <Compile Include="Forms\Dictionaries\AccountDictionaryForm.Designer.cs">
       <DependentUpon>AccountDictionaryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Dictionaries\AddPersonForm.cs">
+    <Compile Include="Forms\Dictionaries\EditPersonForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Dictionaries\AddPersonForm.Designer.cs">
-      <DependentUpon>AddPersonForm.cs</DependentUpon>
+    <Compile Include="Forms\Dictionaries\EditPersonForm.Designer.cs">
+      <DependentUpon>EditPersonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\PersonDictionaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\PersonDictionaryForm.Designer.cs">
+      <DependentUpon>PersonDictionaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\TypeDictionaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\TypeDictionaryForm.Designer.cs">
+      <DependentUpon>TypeDictionaryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Others\DetInfoForm.cs">
       <SubType>Form</SubType>
@@ -124,17 +138,17 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Dictionaries\AddAccountForm.cs">
+    <Compile Include="Forms\Dictionaries\EditAccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Dictionaries\AddAccountForm.Designer.cs">
-      <DependentUpon>AddAccountForm.cs</DependentUpon>
+    <Compile Include="Forms\Dictionaries\EditAccountForm.Designer.cs">
+      <DependentUpon>EditAccountForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Dictionaries\AddTypeForm.cs">
+    <Compile Include="Forms\Dictionaries\EditTypeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Dictionaries\AddTypeForm.Designer.cs">
-      <DependentUpon>AddTypeForm.cs</DependentUpon>
+    <Compile Include="Forms\Dictionaries\EditTypeForm.Designer.cs">
+      <DependentUpon>EditTypeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Editing\PerformOperationForm.cs">
       <SubType>Form</SubType>
@@ -156,8 +170,17 @@
       <DependentUpon>TypeStatsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Dictionaries\AddPersonForm.resx">
-      <DependentUpon>AddPersonForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Dictionaries\AccountDictionaryForm.resx">
+      <DependentUpon>AccountDictionaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\EditPersonForm.resx">
+      <DependentUpon>EditPersonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\PersonDictionaryForm.resx">
+      <DependentUpon>PersonDictionaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\TypeDictionaryForm.resx">
+      <DependentUpon>TypeDictionaryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Others\DetInfoForm.resx">
       <DependentUpon>DetInfoForm.cs</DependentUpon>
@@ -171,11 +194,11 @@
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Dictionaries\AddAccountForm.resx">
-      <DependentUpon>AddAccountForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Dictionaries\EditAccountForm.resx">
+      <DependentUpon>EditAccountForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Dictionaries\AddTypeForm.resx">
-      <DependentUpon>AddTypeForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Dictionaries\EditTypeForm.resx">
+      <DependentUpon>EditTypeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Editing\PerformOperationForm.resx">
       <DependentUpon>PerformOperationForm.cs</DependentUpon>
@@ -199,6 +222,8 @@
     <None Include="Properties\DataSources\FinanceControlDAL.Models.Account.datasource" />
     <None Include="Properties\DataSources\FinanceControlDAL.Models.Income.datasource" />
     <None Include="Properties\DataSources\FinanceControlDAL.Models.Outlay.datasource" />
+    <None Include="Properties\DataSources\FinanceControlDAL.Models.Person.datasource" />
+    <None Include="Properties\DataSources\FinanceControlDAL.Models.Type.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

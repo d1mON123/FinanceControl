@@ -1,26 +1,26 @@
 ﻿using FinanceControlApp.Classes;
-using FinanceControlDAL.Models;
-using FinanceControlDAL.Repos;
 using System;
 using System.Windows.Forms;
+using FinanceControlDAL.Models;
+using FinanceControlDAL.Repos;
 
-namespace FinanceControlApp.Forms
+namespace FinanceControlApp.Forms.Dictionaries
 {
-    public partial class AccountDictionaryForm : Form, IDictionary
+    public partial class PersonDictionaryForm : Form, IDictionary
     {
-        public AccountDictionaryForm()
+        public PersonDictionaryForm()
         {
             InitializeComponent();
         }
 
-        private void AccountDictionaryForm_Load(object sender, EventArgs e)
+        private void PersonDictionaryForm_Load(object sender, EventArgs e)
         {
             UpdateGrid();
         }
 
         public void UpdateGrid()
         {
-            using (var repo = new AccountRepo())
+            using (var repo = new PersonRepo())
             {
                 accountDataGrid.DataSource = repo.GetAll();
             }
@@ -28,7 +28,7 @@ namespace FinanceControlApp.Forms
 
         public void AddButton_Click(object sender, EventArgs e)
         {
-            using (var form = new EditAccountForm())
+            using (var form = new EditPersonForm())
             {
                 if (form.ShowDialog() == DialogResult.OK) UpdateGrid();
             }
@@ -36,9 +36,9 @@ namespace FinanceControlApp.Forms
 
         public void EditButton_Click(object sender, EventArgs e)
         {
-            var a = accountDataGrid.CurrentRow?.DataBoundItem as Account;
-            if (a == null) return;
-            using (var form = new EditAccountForm(a))
+            var p = accountDataGrid.CurrentRow?.DataBoundItem as Person;
+            if (p == null) return;
+            using (var form = new EditPersonForm(p))
             {
                 form.ShowDialog();
             }
@@ -47,14 +47,14 @@ namespace FinanceControlApp.Forms
 
         public void DelButton_Click(object sender, EventArgs e)
         {
-            var a = accountDataGrid.CurrentRow?.DataBoundItem as Account;
-            if (a == null) return;
+            var p = accountDataGrid.CurrentRow?.DataBoundItem as Person;
+            if (p == null) return;
             if (MessageBox.Show("Видалити обране поле?", "Видалення", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) ==
                 DialogResult.OK)
             {
-                using (var repo = new AccountRepo())
+                using (var repo = new PersonRepo())
                 {
-                    repo.Delete(a);
+                    repo.Delete(p);
                 }
                 UpdateGrid();
             }

@@ -1,6 +1,6 @@
 ﻿namespace FinanceControlApp.Forms
 {
-    partial class AddPersonForm
+    partial class EditPersonForm
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +44,7 @@
             this.personAddButton.TabIndex = 11;
             this.personAddButton.Text = "Додати";
             this.personAddButton.UseVisualStyleBackColor = true;
-            this.personAddButton.Click += new System.EventHandler(this.personAddButton_Click);
+            this.personAddButton.Click += new System.EventHandler(this.AcceptButton_Click);
             // 
             // label1
             // 
@@ -75,7 +75,7 @@
             this.personNameBox.Size = new System.Drawing.Size(131, 26);
             this.personNameBox.TabIndex = 8;
             // 
-            // AddPersonForm
+            // EditPersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -86,7 +86,7 @@
             this.Controls.Add(this.personNameBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "AddPersonForm";
+            this.Name = "EditPersonForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додавання особи";
             this.ResumeLayout(false);

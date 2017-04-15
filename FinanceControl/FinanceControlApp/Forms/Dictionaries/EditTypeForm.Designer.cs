@@ -1,6 +1,6 @@
 ﻿namespace FinanceControlApp.Forms
 {
-    partial class AddTypeForm
+    partial class EditTypeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.typeNameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -44,15 +44,15 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Скасувати";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.AcceptButton_Click);
             // 
-            // textBox1
+            // typeNameBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(114, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 26);
-            this.textBox1.TabIndex = 3;
+            this.typeNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.typeNameBox.Location = new System.Drawing.Point(114, 25);
+            this.typeNameBox.Name = "typeNameBox";
+            this.typeNameBox.Size = new System.Drawing.Size(131, 26);
+            this.typeNameBox.TabIndex = 3;
             // 
             // label1
             // 
@@ -75,7 +75,7 @@
             this.button2.Text = "Додати";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // AddTypeForm
+            // EditTypeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -83,9 +83,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.typeNameBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "AddTypeForm";
+            this.Name = "EditTypeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додавання категорії";
             this.ResumeLayout(false);
@@ -96,7 +96,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox typeNameBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
     }

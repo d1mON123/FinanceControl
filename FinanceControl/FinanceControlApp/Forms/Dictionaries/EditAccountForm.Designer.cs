@@ -1,6 +1,6 @@
 ﻿namespace FinanceControlApp.Forms
 {
-    partial class AddAccountForm
+    partial class EditAccountForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             ImageComboBox.ImageComboBoxItem imageComboBoxItem4 = new ImageComboBox.ImageComboBoxItem();
             ImageComboBox.ImageComboBoxItem imageComboBoxItem5 = new ImageComboBox.ImageComboBoxItem();
             ImageComboBox.ImageComboBoxItem imageComboBoxItem6 = new ImageComboBox.ImageComboBoxItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAccountForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditAccountForm));
             this.accountNameBox = new System.Windows.Forms.TextBox();
             this.accountCurrAmountBox = new System.Windows.Forms.TextBox();
             this.addButton = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             // accountNameBox
             // 
             this.accountNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.accountNameBox.Location = new System.Drawing.Point(525, 23);
+            this.accountNameBox.Location = new System.Drawing.Point(150, 21);
             this.accountNameBox.Name = "accountNameBox";
             this.accountNameBox.Size = new System.Drawing.Size(131, 26);
             this.accountNameBox.TabIndex = 0;
@@ -58,7 +58,7 @@
             // accountCurrAmountBox
             // 
             this.accountCurrAmountBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.accountCurrAmountBox.Location = new System.Drawing.Point(525, 67);
+            this.accountCurrAmountBox.Location = new System.Drawing.Point(150, 65);
             this.accountCurrAmountBox.Name = "accountCurrAmountBox";
             this.accountCurrAmountBox.Size = new System.Drawing.Size(131, 26);
             this.accountCurrAmountBox.TabIndex = 1;
@@ -67,19 +67,19 @@
             // 
             this.addButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addButton.Location = new System.Drawing.Point(417, 150);
+            this.addButton.Location = new System.Drawing.Point(42, 154);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(97, 29);
             this.addButton.TabIndex = 2;
             this.addButton.Text = "Додати";
             this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            this.addButton.Click += new System.EventHandler(this.AcceptButton_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(387, 26);
+            this.label1.Location = new System.Drawing.Point(12, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 20);
             this.label1.TabIndex = 3;
@@ -89,7 +89,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(387, 73);
+            this.label2.Location = new System.Drawing.Point(12, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 4;
@@ -99,7 +99,7 @@
             // 
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cancelButton.Location = new System.Drawing.Point(540, 150);
+            this.cancelButton.Location = new System.Drawing.Point(165, 154);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(97, 29);
             this.cancelButton.TabIndex = 5;
@@ -155,7 +155,7 @@
             imageComboBoxItem4,
             imageComboBoxItem5,
             imageComboBoxItem6});
-            this.imageComboBox1.Location = new System.Drawing.Point(553, 99);
+            this.imageComboBox1.Location = new System.Drawing.Point(178, 97);
             this.imageComboBox1.MaxDropDownItems = 3;
             this.imageComboBox1.Name = "imageComboBox1";
             this.imageComboBox1.Size = new System.Drawing.Size(67, 46);
@@ -177,17 +177,17 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(387, 115);
+            this.label3.Location = new System.Drawing.Point(12, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Зображення:";
             // 
-            // AddAccountForm
+            // EditAccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 200);
+            this.ClientSize = new System.Drawing.Size(298, 200);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.imageComboBox1);
             this.Controls.Add(this.cancelButton);
@@ -198,9 +198,10 @@
             this.Controls.Add(this.accountNameBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "AddAccountForm";
+            this.Name = "EditAccountForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додавання рахунку";
+            this.Load += new System.EventHandler(this.EditDictionaryForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

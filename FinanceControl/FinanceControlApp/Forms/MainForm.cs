@@ -208,7 +208,7 @@ namespace FinanceControlApp.Forms
 
         private void типToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (var form = new AddTypeForm())
+            using (var form = new EditTypeForm())
             {
                 if (form.ShowDialog() == DialogResult.OK) UpdateForm();
             }
@@ -216,7 +216,7 @@ namespace FinanceControlApp.Forms
 
         private void члениСіміToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (var form = new AddPersonForm())
+            using (var form = new EditPersonForm())
             {
                 if (form.ShowDialog() == DialogResult.OK) UpdateForm();
             }
@@ -224,9 +224,10 @@ namespace FinanceControlApp.Forms
 
         private void рахункиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (var form = new AddAccountForm())
+            using (var form = new AccountDictionaryForm())
             {
-                if (form.ShowDialog() == DialogResult.OK) UpdateForm();
+                form.ShowDialog();
+                UpdateForm();
             }
         }
 
