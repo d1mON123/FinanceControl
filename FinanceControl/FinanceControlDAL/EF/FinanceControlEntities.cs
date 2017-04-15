@@ -1,10 +1,7 @@
 namespace FinanceControlDAL.EF
 {
-    using System;
+    using Models;
     using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
-    using FinanceControlDAL.Models;
 
     public partial class FinanceControlEntities : DbContext
     {
@@ -17,7 +14,7 @@ namespace FinanceControlDAL.EF
         public virtual DbSet<Income> Incomes { get; set; }
         public virtual DbSet<Outlay> Outlays { get; set; }
         public virtual DbSet<Person> People { get; set; }
-        public virtual DbSet<Models.Type> Types { get; set; }
+        public virtual DbSet<Type> Types { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -61,17 +58,17 @@ namespace FinanceControlDAL.EF
                 .HasForeignKey(e => e.Person_ID)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Models.Type>()
+            modelBuilder.Entity<Type>()
                 .Property(e => e.Name)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Models.Type>()
+            modelBuilder.Entity<Type>()
                 .HasMany(e => e.Incomes)
                 .WithRequired(e => e.Type)
                 .HasForeignKey(e => e.Type_ID)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Models.Type>()
+            modelBuilder.Entity<Type>()
                 .HasMany(e => e.Outlays)
                 .WithRequired(e => e.Type)
                 .HasForeignKey(e => e.Type_ID)

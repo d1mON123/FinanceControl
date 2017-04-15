@@ -1,9 +1,10 @@
 ﻿using System.Data.Entity;
 using System.Threading.Tasks;
+using FinanceControlDAL.Models;
 
 namespace FinanceControlDAL.Repos
 {
-    public class TypeRepo : BaseRepo<Models.Type>, IRepo<Models.Type>
+    public class TypeRepo : BaseRepo<Type>, IRepo<Type>
     {
         public TypeRepo()
         {

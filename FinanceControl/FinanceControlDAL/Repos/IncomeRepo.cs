@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using FinanceControlDAL.Models;
+﻿using FinanceControlDAL.Models;
 using System.Data.Entity;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace FinanceControlDAL.Repos
