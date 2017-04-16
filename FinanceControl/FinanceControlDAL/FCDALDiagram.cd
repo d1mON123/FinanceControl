@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FinanceControlDAL.EF.FinanceControlEntities">
+    <Position X="1.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAIAABAAAAAAAAAAAEAAAQACAAAAAAAAAAAA=</HashCode>
+      <FileName>EF\FinanceControlEntities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceControlDAL.Models.Account">
+    <Position X="1.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAhAgEAAAAAAQAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Account.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceControlDAL.Models.Income">
+    <Position X="3.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICAAAIEJAAAgAAAAACAAAAAAAAAAAAEAQAgAAAAAEA=</HashCode>
+      <FileName>Models\Income.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceControlDAL.Models.Outlay">
+    <Position X="5.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICAAAIEJAAAgAAAAACAAAAAAAAAAAAEAQAgAAAAAEA=</HashCode>
+      <FileName>Models\Outlay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceControlDAL.Models.Person">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAhAAEAAAAAAQAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceControlDAL.Models.Type">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAhAAEAAAAAAQAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Type.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceControlDAL.Repos.AccountRepo">
+    <Position X="13.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repos\AccountRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlDAL.Repos.BaseRepo&lt;T&gt;">
+    <Position X="9.25" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAMAAIAACiAAAEAAAAAAQEEAAIEAAAAAAgEAAAAkCIA=</HashCode>
+      <FileName>Repos\BaseRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlDAL.Repos.IncomeRepo">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repos\IncomeRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlDAL.Repos.OutlayRepo">
+    <Position X="11.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repos\OutlayRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlDAL.Repos.PersonRepo">
+    <Position X="11.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repos\PersonRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlDAL.Repos.TypeRepo">
+    <Position X="13.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repos\TypeRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="FinanceControlDAL.Repos.IRepo&lt;T&gt;">
+    <Position X="7" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAMAAIAACAAAAAAAAAAAAEEAAIEAAAAAAgEAAAAkCIA=</HashCode>
+      <FileName>Repos\IRepo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

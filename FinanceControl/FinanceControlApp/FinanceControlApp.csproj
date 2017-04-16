@@ -225,6 +225,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="FCAppDiagram.cd" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\FinanceControlDAL.Models.Account.datasource" />
     <None Include="Properties\DataSources\FinanceControlDAL.Models.Income.datasource" />

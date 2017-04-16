@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FinanceControlExchangeLib.AbstractCurrencyRates">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="FinanceControlExchangeLib.AbstractCurrencyRates.chapter">
+        <TypeIdentifier>
+          <NewMemberFileName>Classes\AbstractCurrencyRates.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="FinanceControlExchangeLib.AbstractCurrencyRates.item">
+        <TypeIdentifier>
+          <NewMemberFileName>Classes\AbstractCurrencyRates.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\AbstractCurrencyRates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceControlExchangeLib.CurrencyRate">
+    <Position X="3" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIEIAAABAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\CurrencyRate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceControlExchangeLib.CurrencyRates">
+    <Position X="3" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\CurrencyRates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FinanceControlApp.Forms.AccountDictionaryForm">
+    <Position X="4.75" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAACAIABACCACAAAACAgAAAGAAgEAAgAgAAAA=</HashCode>
+      <FileName>Forms\Dictionaries\AccountDictionaryForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlApp.Forms.MainForm">
+    <Position X="1.25" Y="5.75" Width="1.5" />
+    <Members>
+      <Field Name="commentDataGridViewTextBoxColumn" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="currMonthLabel" Hidden="true" />
+      <Field Name="dataGridViewTextBoxColumn2" Hidden="true" />
+      <Field Name="dataGridViewTextBoxColumn3" Hidden="true" />
+      <Field Name="dataGridViewTextBoxColumn4" Hidden="true" />
+      <Field Name="dataGridViewTextBoxColumn5" Hidden="true" />
+      <Field Name="dataGridViewTextBoxColumn8" Hidden="true" />
+      <Field Name="dayDataGridViewTextBoxColumn" Hidden="true" />
+      <Field Name="folderBrowserDialog1" Hidden="true" />
+      <Field Name="imageList1" Hidden="true" />
+      <Field Name="imageList2" Hidden="true" />
+      <Field Name="incomeBindingSource" Hidden="true" />
+      <Field Name="incomeDataGridView" Hidden="true" />
+      <Field Name="menuStrip1" Hidden="true" />
+      <Field Name="monthDataGridViewTextBoxColumn" Hidden="true" />
+      <Field Name="nextMonthButton" Hidden="true" />
+      <Field Name="outlayBindingSource" Hidden="true" />
+      <Field Name="outlayDataGridView" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="prevMonthButton" Hidden="true" />
+      <Field Name="toolStrip1" Hidden="true" />
+      <Field Name="toolStrip2" Hidden="true" />
+      <Field Name="toolStripButton1" Hidden="true" />
+      <Field Name="toolStripButton2" Hidden="true" />
+      <Field Name="toolStripButton3" Hidden="true" />
+      <Field Name="toolStripButton4" Hidden="true" />
+      <Field Name="toolStripSeparator1" Hidden="true" />
+      <Field Name="Value" Hidden="true" />
+      <Field Name="yearDataGridViewTextBoxColumn" Hidden="true" />
+      <Field Name="видалитиToolStripMenuItem" Hidden="true" />
+      <Field Name="витратиToolStripMenuItem" Hidden="true" />
+      <Field Name="вихідToolStripMenuItem" Hidden="true" />
+      <Field Name="довідникиToolStripMenuItem" Hidden="true" />
+      <Field Name="додатиToolStripMenuItem" Hidden="true" />
+      <Field Name="дохідToolStripMenuItem" Hidden="true" />
+      <Field Name="експортБазиДаннихToolStripMenuItem" Hidden="true" />
+      <Field Name="інструментиToolStripMenuItem" Hidden="true" />
+      <Field Name="конвертерВалютToolStripMenuItem" Hidden="true" />
+      <Field Name="поКатегоріяхToolStripMenuItem" Hidden="true" />
+      <Field Name="поКатегоріяхToolStripMenuItem1" Hidden="true" />
+      <Field Name="поКатегоріяхToolStripMenuItem2" Hidden="true" />
+      <Field Name="поРахункахToolStripMenuItem" Hidden="true" />
+      <Field Name="поЧленахСімїToolStripMenuItem" Hidden="true" />
+      <Field Name="поЧленахСімїToolStripMenuItem1" Hidden="true" />
+      <Field Name="рахункиToolStripMenuItem" Hidden="true" />
+      <Field Name="редагуванняToolStripMenuItem" Hidden="true" />
+      <Field Name="редагуватиToolStripMenuItem" Hidden="true" />
+      <Field Name="статистикаToolStripMenuItem" Hidden="true" />
+      <Field Name="типToolStripMenuItem" Hidden="true" />
+      <Field Name="файлToolStripMenuItem" Hidden="true" />
+      <Field Name="члениСіміToolStripMenuItem" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CRQgCMEKKCGqKKKBhHbgcFuChiBBACCAEAwgoYkAIkw=</HashCode>
+      <FileName>Forms\MainForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlApp.Forms.ExchangeRateForm">
+    <Position X="13.5" Y="9.25" Width="1.5" />
+    <Members>
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="performButton" Hidden="true" />
+      <Field Name="resultBox" Hidden="true" />
+      <Field Name="secondCurrencyBox" Hidden="true" />
+      <Field Name="textBox1" Hidden="true" />
+      <Field Name="ValueBox" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQAgAAAACAAABAAAACAAAICAIAAgAQAEAAAAAAAAAQ=</HashCode>
+      <FileName>Forms\Tools\ExchangeRateForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlApp.Forms.AccountStatsForm">
+    <Position X="3" Y="8.75" Width="1.5" />
+    <Members>
+      <Field Name="chart1" Hidden="true" />
+      <Field Name="chart2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="currMonthLabel" Hidden="true" />
+      <Field Name="nextMonthButton" Hidden="true" />
+      <Field Name="prevMonthButton" Hidden="true" />
+      <Field Name="tabControl1" Hidden="true" />
+      <Field Name="tabPage1" Hidden="true" />
+      <Field Name="tabPage2" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQCAAICAACGAAAAAACDAAAECIAAAAACAAIAAAAABBAA=</HashCode>
+      <FileName>Forms\Stats\AccountStatsForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlApp.Forms.PersonStatsForm">
+    <Position X="1.25" Y="8.75" Width="1.5" />
+    <Members>
+      <Field Name="chart1" Hidden="true" />
+      <Field Name="chart2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="currMonthLabel" Hidden="true" />
+      <Field Name="nextMonthButton" Hidden="true" />
+      <Field Name="prevMonthButton" Hidden="true" />
+      <Field Name="tabControl1" Hidden="true" />
+      <Field Name="tabPage1" Hidden="true" />
+      <Field Name="tabPage2" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQCAAICAACGAAAAAACDAAAECIAAAAACAAIAAAAABBAA=</HashCode>
+      <FileName>Forms\Stats\PersonStatsForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlApp.Forms.TypeStatsForm">
+    <Position X="4.75" Y="8.75" Width="1.5" />
+    <Members>
+      <Field Name="chart1" Hidden="true" />
+      <Field Name="chart2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="currMonthLabel" Hidden="true" />
+      <Field Name="nextMonthButton" Hidden="true" />
+      <Field Name="prevMonthButton" Hidden="true" />
+      <Field Name="tabControl1" Hidden="true" />
+      <Field Name="tabPage1" Hidden="true" />
+      <Field Name="tabPage2" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQCAAICAACGAAAAAACDAAAECIAAAAACAAIAAAAABBAA=</HashCode>
+      <FileName>Forms\Stats\TypeStatsForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlApp.Forms.DetInfoForm">
+    <Position X="11.75" Y="9" Width="1.5" />
+    <Members>
+      <Field Name="accountBox" Hidden="true" />
+      <Field Name="commentBox" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="dayBox" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="label8" Hidden="true" />
+      <Field Name="monthBox" Hidden="true" />
+      <Field Name="personBox" Hidden="true" />
+      <Field Name="typeBox" Hidden="true" />
+      <Field Name="valieBox" Hidden="true" />
+      <Field Name="yearBox" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAEAEAACAAABAQACDAAADDAAQACABAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\Others\DetInfoForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlApp.Forms.EditOperationForm">
+    <Position X="10" Y="9.25" Width="1.5" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Field Name="incomeAccountComboBox" Hidden="true" />
+      <Field Name="incomeAddButton" Hidden="true" />
+      <Field Name="incomeCancelButton" Hidden="true" />
+      <Field Name="incomeCommentBox" Hidden="true" />
+      <Field Name="incomeDatePicker" Hidden="true" />
+      <Field Name="incomePersonComboBox" Hidden="true" />
+      <Field Name="incomeTypeComboBox" Hidden="true" />
+      <Field Name="incomeValueBox" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label10" Hidden="true" />
+      <Field Name="label11" Hidden="true" />
+      <Field Name="label12" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="label8" Hidden="true" />
+      <Field Name="label9" Hidden="true" />
+      <Field Name="outlayAccountComboBox" Hidden="true" />
+      <Field Name="outlayAddButton" Hidden="true" />
+      <Field Name="outlayCancelButton" Hidden="true" />
+      <Field Name="outlayCommentBox" Hidden="true" />
+      <Field Name="outlayDatePicker" Hidden="true" />
+      <Field Name="outlayPersonComboBox" Hidden="true" />
+      <Field Name="outlayTypeComboBox" Hidden="true" />
+      <Field Name="outlayValueBox" Hidden="true" />
+      <Field Name="tabControl1" Hidden="true" />
+      <Field Name="tabPage1" Hidden="true" />
+      <Field Name="tabPage2" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>cCCACABAACCAgFAIAhCAAENCBAAAAAAAKAAAAEAZDAA=</HashCode>
+      <FileName>Forms\Editing\EditOperationForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlApp.Forms.EditAccountForm">
+    <Position X="13.5" Y="4.75" Width="1.5" />
+    <Members>
+      <Field Name="imageComboBox1" Hidden="true" />
+      <Field Name="imageList1" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACQIABAAAACAAAACAAAIAAAggAAAAIBAAAQ=</HashCode>
+      <FileName>Forms\Dictionaries\EditAccountForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlApp.Forms.EditPersonForm">
+    <Position X="11.75" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAAIAAAIAEAAAMCAAAA=</HashCode>
+      <FileName>Forms\Dictionaries\EditPersonForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlApp.Forms.EditTypeForm">
+    <Position X="10" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAAYAAAAAgQAAIAAAAA=</HashCode>
+      <FileName>Forms\Dictionaries\EditTypeForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlApp.Forms.PersonDictionaryForm">
+    <Position X="6.5" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAACAAIBACCACAAAACAgAAACAAiEAAAAgAAAA=</HashCode>
+      <FileName>Forms\Dictionaries\PersonDictionaryForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FinanceControlApp.Forms.TypeDictionaryForm">
+    <Position X="8.25" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAACAAABACCACAAAECAgAAACACgEAAAAgAAAA=</HashCode>
+      <FileName>Forms\Dictionaries\TypeDictionaryForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="FinanceControlApp.Classes.IMain">
+    <Position X="1.25" Y="3" Width="1.5" />
+    <Members>
+      <Method Name="OpenAccountDictionary" Hidden="true" />
+      <Method Name="OpenPersonDictionary" Hidden="true" />
+      <Method Name="OpenTypeDictionary" Hidden="true" />
+      <Method Name="OutlayDataGridView_Click" Hidden="true" />
+      <Method Name="OutlayDataGridView_DoubleClick" Hidden="true" />
+      <Method Name="PrevMonthButton_Click" Hidden="true" />
+      <Method Name="ShowCurrencyConverter" Hidden="true" />
+      <Method Name="ShowIncomeStatsByAccount" Hidden="true" />
+      <Method Name="ShowIncomeStatsByPerson" Hidden="true" />
+      <Method Name="ShowIncomeStatsByType" Hidden="true" />
+      <Method Name="ShowOutlayStatsByAccount" Hidden="true" />
+      <Method Name="ShowOutlayStatsByPerson" Hidden="true" />
+      <Method Name="ShowOutlayStatsByType" Hidden="true" />
+      <Method Name="UpdateForm" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>CBQAAAACIAAgCAIAABBAQAEABCBAAAAAAAwAoAEAAAg=</HashCode>
+      <FileName>Classes\IMain.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FinanceControlApp.Classes.IExchange">
+    <Position X="13.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Tools\IExchange.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FinanceControlApp.Classes.IStats">
+    <Position X="3" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAEAIAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Classes\Stats\IStats.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FinanceControlApp.Classes.IDetails">
+    <Position X="11.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Others\IDetails.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FinanceControlApp.Classes.IPerformOperation">
+    <Position X="10" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Classes\Editing\IPerformOperation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FinanceControlApp.Classes.IDictionary">
+    <Position X="6.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAgAAACAAAEAAAAAAAAA=</HashCode>
+      <FileName>Classes\Dictionaries\IDictionary.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FinanceControlApp.Classes.IDictionaryEdit">
+    <Position X="11.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Classes\Dictionaries\IDictionaryEdit.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
