@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExchangeRateForm));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.firstCurrencyBox = new System.Windows.Forms.ComboBox();
             this.secondCurrencyBox = new System.Windows.Forms.ComboBox();
@@ -127,6 +128,7 @@
             this.Controls.Add(this.firstCurrencyBox);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ExchangeRateForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

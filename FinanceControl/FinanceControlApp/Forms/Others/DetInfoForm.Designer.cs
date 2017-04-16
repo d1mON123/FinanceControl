@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetInfoForm));
             this.dayBox = new System.Windows.Forms.TextBox();
             this.monthBox = new System.Windows.Forms.TextBox();
             this.yearBox = new System.Windows.Forms.TextBox();
@@ -221,6 +222,7 @@
             this.Controls.Add(this.monthBox);
             this.Controls.Add(this.dayBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "DetInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

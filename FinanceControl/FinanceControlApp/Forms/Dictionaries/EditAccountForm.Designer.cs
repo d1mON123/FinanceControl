@@ -197,6 +197,7 @@
             this.Controls.Add(this.accountCurrAmountBox);
             this.Controls.Add(this.accountNameBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "EditAccountForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

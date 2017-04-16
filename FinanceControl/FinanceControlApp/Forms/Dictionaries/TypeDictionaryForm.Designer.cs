@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TypeDictionaryForm));
             this.accountDataGrid = new System.Windows.Forms.DataGridView();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.delButton = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
-            this.typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.accountDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +60,10 @@
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             this.nameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // typeBindingSource
+            // 
+            this.typeBindingSource.DataSource = typeof(FinanceControlDAL.Models.Type);
             // 
             // delButton
             // 
@@ -90,10 +95,6 @@
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // typeBindingSource
-            // 
-            this.typeBindingSource.DataSource = typeof(FinanceControlDAL.Models.Type);
-            // 
             // TypeDictionaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,6 +105,7 @@
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.addButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "TypeDictionaryForm";
             this.RightToLeftLayout = true;

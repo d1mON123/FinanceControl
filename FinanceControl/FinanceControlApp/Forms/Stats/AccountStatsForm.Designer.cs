@@ -34,6 +34,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountStatsForm));
             this.currMonthLabel = new System.Windows.Forms.Label();
             this.nextMonthButton = new System.Windows.Forms.Button();
             this.prevMonthButton = new System.Windows.Forms.Button();
@@ -154,6 +155,7 @@
             this.Controls.Add(this.nextMonthButton);
             this.Controls.Add(this.prevMonthButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AccountStatsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

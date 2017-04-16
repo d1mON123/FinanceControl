@@ -31,10 +31,22 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.incomeDataGridView = new System.Windows.Forms.DataGridView();
+            this.dayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.monthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.incomeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.outlayDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.outlayBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вихідToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.редагуванняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.додатиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.редагуватиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +68,11 @@
             this.конвертерВалютToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.експортБазиДаннихToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.prevMonthButton = new System.Windows.Forms.Button();
@@ -63,31 +80,14 @@
             this.currMonthLabel = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.вихідToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.outlayBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.monthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.incomeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.incomeDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.incomeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.outlayDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.outlayBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.outlayBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.incomeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // incomeDataGridView
@@ -111,12 +111,48 @@
             this.incomeDataGridView.Click += new System.EventHandler(this.IncomeDataGridView_Click);
             this.incomeDataGridView.DoubleClick += new System.EventHandler(this.IncomeDataGridView_DoubleClick);
             // 
+            // dayDataGridViewTextBoxColumn
+            // 
+            this.dayDataGridViewTextBoxColumn.DataPropertyName = "Day";
+            this.dayDataGridViewTextBoxColumn.HeaderText = "День";
+            this.dayDataGridViewTextBoxColumn.Name = "dayDataGridViewTextBoxColumn";
+            this.dayDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dayDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // monthDataGridViewTextBoxColumn
+            // 
+            this.monthDataGridViewTextBoxColumn.DataPropertyName = "Month";
+            this.monthDataGridViewTextBoxColumn.HeaderText = "Місяць";
+            this.monthDataGridViewTextBoxColumn.Name = "monthDataGridViewTextBoxColumn";
+            this.monthDataGridViewTextBoxColumn.ReadOnly = true;
+            this.monthDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // yearDataGridViewTextBoxColumn
+            // 
+            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
+            this.yearDataGridViewTextBoxColumn.HeaderText = "Рік";
+            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
+            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
+            this.yearDataGridViewTextBoxColumn.Width = 70;
+            // 
             // Value
             // 
             this.Value.DataPropertyName = "Value";
             this.Value.HeaderText = "Вартість";
             this.Value.Name = "Value";
             this.Value.ReadOnly = true;
+            // 
+            // commentDataGridViewTextBoxColumn
+            // 
+            this.commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
+            this.commentDataGridViewTextBoxColumn.HeaderText = "Коментар";
+            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            this.commentDataGridViewTextBoxColumn.ReadOnly = true;
+            this.commentDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // incomeBindingSource
+            // 
+            this.incomeBindingSource.DataSource = typeof(FinanceControlDAL.Models.Income);
             // 
             // outlayDataGridView
             // 
@@ -139,12 +175,48 @@
             this.outlayDataGridView.Click += new System.EventHandler(this.OutlayDataGridView_Click);
             this.outlayDataGridView.DoubleClick += new System.EventHandler(this.OutlayDataGridView_DoubleClick);
             // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Day";
+            this.dataGridViewTextBoxColumn3.HeaderText = "День";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Month";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Місяць";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Year";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Рік";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 70;
+            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Value";
             this.dataGridViewTextBoxColumn2.HeaderText = "Вартість";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Comment";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Коментар";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 200;
+            // 
+            // outlayBindingSource
+            // 
+            this.outlayBindingSource.DataSource = typeof(FinanceControlDAL.Models.Outlay);
             // 
             // menuStrip1
             // 
@@ -160,6 +232,20 @@
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // файлToolStripMenuItem
+            // 
+            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вихідToolStripMenuItem});
+            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.файлToolStripMenuItem.Text = "Файл";
+            // 
+            // вихідToolStripMenuItem
+            // 
+            this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
+            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.вихідToolStripMenuItem.Text = "Вихід";
+            // 
             // редагуванняToolStripMenuItem
             // 
             this.редагуванняToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -173,21 +259,21 @@
             // додатиToolStripMenuItem
             // 
             this.додатиToolStripMenuItem.Name = "додатиToolStripMenuItem";
-            this.додатиToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.додатиToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.додатиToolStripMenuItem.Text = "Додати";
             this.додатиToolStripMenuItem.Click += new System.EventHandler(this.AddOperation);
             // 
             // редагуватиToolStripMenuItem
             // 
             this.редагуватиToolStripMenuItem.Name = "редагуватиToolStripMenuItem";
-            this.редагуватиToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.редагуватиToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.редагуватиToolStripMenuItem.Text = "Редагувати";
             this.редагуватиToolStripMenuItem.Click += new System.EventHandler(this.EditOperation);
             // 
             // видалитиToolStripMenuItem
             // 
             this.видалитиToolStripMenuItem.Name = "видалитиToolStripMenuItem";
-            this.видалитиToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.видалитиToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.видалитиToolStripMenuItem.Text = "Видалити";
             this.видалитиToolStripMenuItem.Click += new System.EventHandler(this.DeleteOperation);
             // 
@@ -204,21 +290,21 @@
             // типToolStripMenuItem
             // 
             this.типToolStripMenuItem.Name = "типToolStripMenuItem";
-            this.типToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.типToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.типToolStripMenuItem.Text = "Категорії";
             this.типToolStripMenuItem.Click += new System.EventHandler(this.OpenTypeDictionary);
             // 
             // члениСіміToolStripMenuItem
             // 
             this.члениСіміToolStripMenuItem.Name = "члениСіміToolStripMenuItem";
-            this.члениСіміToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.члениСіміToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.члениСіміToolStripMenuItem.Text = "Члени сім\'і";
             this.члениСіміToolStripMenuItem.Click += new System.EventHandler(this.OpenPersonDictionary);
             // 
             // рахункиToolStripMenuItem
             // 
             this.рахункиToolStripMenuItem.Name = "рахункиToolStripMenuItem";
-            this.рахункиToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.рахункиToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.рахункиToolStripMenuItem.Text = "Рахунки";
             this.рахункиToolStripMenuItem.Click += new System.EventHandler(this.OpenAccountDictionary);
             // 
@@ -238,7 +324,7 @@
             this.витратиToolStripMenuItem,
             this.поЧленахСімїToolStripMenuItem});
             this.поКатегоріяхToolStripMenuItem.Name = "поКатегоріяхToolStripMenuItem";
-            this.поКатегоріяхToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.поКатегоріяхToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.поКатегоріяхToolStripMenuItem.Text = "Дохід";
             // 
             // дохідToolStripMenuItem
@@ -269,7 +355,7 @@
             this.поКатегоріяхToolStripMenuItem2,
             this.поЧленахСімїToolStripMenuItem1});
             this.поКатегоріяхToolStripMenuItem1.Name = "поКатегоріяхToolStripMenuItem1";
-            this.поКатегоріяхToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.поКатегоріяхToolStripMenuItem1.Size = new System.Drawing.Size(118, 22);
             this.поКатегоріяхToolStripMenuItem1.Text = "Витрати";
             // 
             // поРахункахToolStripMenuItem
@@ -330,6 +416,51 @@
             this.toolStrip1.Size = new System.Drawing.Size(806, 47);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::FinanceControlApp.Properties.Resources._004_plus;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(44, 44);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.AddOperation);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::FinanceControlApp.Properties.Resources._003_error;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(44, 44);
+            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Click += new System.EventHandler(this.DeleteOperation);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = global::FinanceControlApp.Properties.Resources._002_edit;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(44, 44);
+            this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Click += new System.EventHandler(this.EditOperation);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 47);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = global::FinanceControlApp.Properties.Resources._001_share;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(44, 44);
+            this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Click += new System.EventHandler(this.ExportDatabase);
             // 
             // panel1
             // 
@@ -397,20 +528,6 @@
             this.imageList1.Images.SetKeyName(5, "6.png");
             this.imageList1.Images.SetKeyName(6, "7.png");
             // 
-            // вихідToolStripMenuItem
-            // 
-            this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
-            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.вихідToolStripMenuItem.Text = "Вихід";
-            // 
-            // файлToolStripMenuItem
-            // 
-            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.вихідToolStripMenuItem});
-            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.файлToolStripMenuItem.Text = "Файл";
-            // 
             // imageList2
             // 
             this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
@@ -419,119 +536,6 @@
             this.imageList2.Images.SetKeyName(1, "003-error.png");
             this.imageList2.Images.SetKeyName(2, "002-edit.png");
             this.imageList2.Images.SetKeyName(3, "001-share.png");
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 47);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::FinanceControlApp.Properties.Resources._004_plus;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(44, 44);
-            this.toolStripButton1.Text = "toolStripButton1";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::FinanceControlApp.Properties.Resources._003_error;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(44, 44);
-            this.toolStripButton2.Text = "toolStripButton2";
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::FinanceControlApp.Properties.Resources._002_edit;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(44, 44);
-            this.toolStripButton3.Text = "toolStripButton3";
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::FinanceControlApp.Properties.Resources._001_share;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(44, 44);
-            this.toolStripButton4.Text = "toolStripButton4";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Day";
-            this.dataGridViewTextBoxColumn3.HeaderText = "День";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Month";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Місяць";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Year";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Рік";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Comment";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Коментар";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 200;
-            // 
-            // outlayBindingSource
-            // 
-            this.outlayBindingSource.DataSource = typeof(FinanceControlDAL.Models.Outlay);
-            // 
-            // dayDataGridViewTextBoxColumn
-            // 
-            this.dayDataGridViewTextBoxColumn.DataPropertyName = "Day";
-            this.dayDataGridViewTextBoxColumn.HeaderText = "День";
-            this.dayDataGridViewTextBoxColumn.Name = "dayDataGridViewTextBoxColumn";
-            this.dayDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dayDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // monthDataGridViewTextBoxColumn
-            // 
-            this.monthDataGridViewTextBoxColumn.DataPropertyName = "Month";
-            this.monthDataGridViewTextBoxColumn.HeaderText = "Місяць";
-            this.monthDataGridViewTextBoxColumn.Name = "monthDataGridViewTextBoxColumn";
-            this.monthDataGridViewTextBoxColumn.ReadOnly = true;
-            this.monthDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // yearDataGridViewTextBoxColumn
-            // 
-            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
-            this.yearDataGridViewTextBoxColumn.HeaderText = "Рік";
-            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
-            this.yearDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // commentDataGridViewTextBoxColumn
-            // 
-            this.commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
-            this.commentDataGridViewTextBoxColumn.HeaderText = "Коментар";
-            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
-            this.commentDataGridViewTextBoxColumn.ReadOnly = true;
-            this.commentDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // incomeBindingSource
-            // 
-            this.incomeBindingSource.DataSource = typeof(FinanceControlDAL.Models.Income);
             // 
             // MainForm
             // 
@@ -547,6 +551,7 @@
             this.Controls.Add(this.incomeDataGridView);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MainForm";
@@ -554,14 +559,14 @@
             this.Text = "Контроллер фінансів";
             this.Load += new System.EventHandler(this.Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.incomeDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.incomeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.outlayDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.outlayBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.outlayBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.incomeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

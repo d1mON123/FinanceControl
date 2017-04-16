@@ -235,6 +235,12 @@ namespace FinanceControlApp.Forms
                 if (MessageBox.Show(@"Видалити обране поле?", @"Видалення", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) ==
                     DialogResult.OK)
                 {
+                    using (var repo = new AccountRepo())
+                    {
+                        var a = repo.GetOne(_currentAccount);
+                        a.CurrentAmount -= i.Value;
+                        repo.Save(a);
+                    }
                     using (var repo = new IncomeRepo())
                     {
                         repo.Delete(i);
@@ -248,6 +254,12 @@ namespace FinanceControlApp.Forms
                 if (MessageBox.Show(@"Видалити обране поле?", @"Видалення", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) ==
                     DialogResult.OK)
                 {
+                    using (var repo = new AccountRepo())
+                    {
+                        var a = repo.GetOne(_currentAccount);
+                        a.CurrentAmount -= o.Value;
+                        repo.Save(a);
+                    }
                     using (var repo = new OutlayRepo())
                     {
                         repo.Delete(o);
