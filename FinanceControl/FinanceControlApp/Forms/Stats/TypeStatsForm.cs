@@ -47,19 +47,21 @@ namespace FinanceControlApp.Forms
             int monthQuery = index + 1;
             int yearQuery = int.Parse(year);
             List<Type> typeList;
-            using (var repo = new TypeRepo())
+            try
             {
-                typeList = repo.GetAll();
-            }
-            if (_typeOfData == 1)
-            {
-                List<Income> incomeList;
-                using (var repo = new IncomeRepo())
+                using (var repo = new TypeRepo())
                 {
-                    incomeList = (repo.GetAll()).FindAll(x =>
-                        (x.Month == monthQuery && x.Year == yearQuery));
+                    typeList = repo.GetAll();
                 }
-                var list = (from a in incomeList
+                if (_typeOfData == 1)
+                {
+                    List<Income> incomeList;
+                    using (var repo = new IncomeRepo())
+                    {
+                        incomeList = (repo.GetAll()).FindAll(x =>
+                            (x.Month == monthQuery && x.Year == yearQuery));
+                    }
+                    var list = (from a in incomeList
                             from b in typeList
                             where (a.Type_ID == b.ID)
                             select
@@ -68,19 +70,19 @@ namespace FinanceControlApp.Forms
                                 Name = b.Name,
                                 Sum = (from m in incomeList where m.Type_ID == b.ID select m.Value).Sum()
                             })
-                    .Distinct().ToList();
-                chart1.DataSource = list;
-                chart2.DataSource = list;
-            }
-            else
-            {
-                List<Outlay> outlayList;
-                using (var repo = new OutlayRepo())
-                {
-                    outlayList = (repo.GetAll()).FindAll(x =>
-                        (x.Month == monthQuery && x.Year == yearQuery));
+                        .Distinct().ToList();
+                    chart1.DataSource = list;
+                    chart2.DataSource = list;
                 }
-                var list = (from a in outlayList
+                else
+                {
+                    List<Outlay> outlayList;
+                    using (var repo = new OutlayRepo())
+                    {
+                        outlayList = (repo.GetAll()).FindAll(x =>
+                            (x.Month == monthQuery && x.Year == yearQuery));
+                    }
+                    var list = (from a in outlayList
                             from b in typeList
                             where (a.Type_ID == b.ID)
                             select
@@ -89,22 +91,27 @@ namespace FinanceControlApp.Forms
                                 Name = b.Name,
                                 Sum = (from m in outlayList where m.Type_ID == b.ID select m.Value).Sum()
                             })
-                    .Distinct().ToList();
-                chart1.DataSource = list;
-                chart2.DataSource = list;
-                chart1.Series["Series1"].Color = System.Drawing.Color.Red;
-                chart2.Series["Series1"].Color = System.Drawing.Color.Red;
+                        .Distinct().ToList();
+                    chart1.DataSource = list;
+                    chart2.DataSource = list;
+                    chart1.Series["Series1"].Color = System.Drawing.Color.Red;
+                    chart2.Series["Series1"].Color = System.Drawing.Color.Red;
+                }
+
+                chart1.Series["Series1"].XValueMember = "Name";
+                chart1.Series["Series1"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+                chart1.Series["Series1"].YValueMembers = "Sum";
+                chart1.Series["Series1"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+
+                chart2.Series["Series1"].XValueMember = "Name";
+                chart2.Series["Series1"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+                chart2.Series["Series1"].YValueMembers = "Sum";
+                chart2.Series["Series1"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
             }
-
-            chart1.Series["Series1"].XValueMember = "Name";
-            chart1.Series["Series1"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            chart1.Series["Series1"].YValueMembers = "Sum";
-            chart1.Series["Series1"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-
-            chart2.Series["Series1"].XValueMember = "Name";
-            chart2.Series["Series1"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            chart2.Series["Series1"].YValueMembers = "Sum";
-            chart2.Series["Series1"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public void prevMonthButton_Click(object sender, EventArgs e)

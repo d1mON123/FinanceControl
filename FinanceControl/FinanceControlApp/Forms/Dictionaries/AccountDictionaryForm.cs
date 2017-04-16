@@ -20,9 +20,16 @@ namespace FinanceControlApp.Forms
 
         public void UpdateGrid()
         {
-            using (var repo = new AccountRepo())
+            try
             {
-                accountDataGrid.DataSource = repo.GetAll();
+                using (var repo = new AccountRepo())
+                {
+                    accountDataGrid.DataSource = repo.GetAll();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -49,12 +56,19 @@ namespace FinanceControlApp.Forms
         {
             var a = accountDataGrid.CurrentRow?.DataBoundItem as Account;
             if (a == null) return;
-            if (MessageBox.Show("Видалити обране поле?", "Видалення", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) ==
+            if (MessageBox.Show(@"Видалити обране поле?", @"Видалення", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) ==
                 DialogResult.OK)
             {
-                using (var repo = new AccountRepo())
+                try
                 {
-                    repo.Delete(a);
+                    using (var repo = new AccountRepo())
+                    {
+                        repo.Delete(a);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
                 UpdateGrid();
             }

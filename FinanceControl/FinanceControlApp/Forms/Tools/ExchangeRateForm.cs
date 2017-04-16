@@ -14,26 +14,33 @@ namespace FinanceControlApp.Forms
 
         public void ExchangeRateForm_Load(object sender, EventArgs e)
         {
-            var firstList = new CurrencyRates().GetExchangeRates();
-            var secondList = new CurrencyRates().GetExchangeRates();
-            foreach (var item in firstList)
+            try
             {
-                textBox1.AppendText(item.GetString() + "\n");
+                var firstList = new CurrencyRates().GetExchangeRates();
+                var secondList = new CurrencyRates().GetExchangeRates();
+                foreach (var item in firstList)
+                {
+                    textBox1.AppendText(item.GetString() + "\n");
+                }
+                firstList.Insert(0, new CurrencyRate()
+                {
+                    CurrencyName = "гривня",
+                    CurrencyStringCode = "UAH",
+                    ExchangeRate = 100
+                });
+                secondList.Insert(0, new CurrencyRate()
+                {
+                    CurrencyName = "гривня",
+                    CurrencyStringCode = "UAH",
+                    ExchangeRate = 100
+                });
+                firstCurrencyBox.DataSource = firstList;
+                secondCurrencyBox.DataSource = secondList;
             }
-            firstList.Insert(0, new CurrencyRate()
+            catch (Exception ex)
             {
-                CurrencyName = "гривня",
-                CurrencyStringCode = "UAH",
-                ExchangeRate = 100
-            });
-            secondList.Insert(0, new CurrencyRate()
-            {
-                CurrencyName = "гривня",
-                CurrencyStringCode = "UAH",
-                ExchangeRate = 100
-            });
-            firstCurrencyBox.DataSource = firstList;
-            secondCurrencyBox.DataSource = secondList;
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public void PerformButton_Click(object sender, EventArgs e)

@@ -1,10 +1,10 @@
-﻿using FinanceControlDAL.Models;
+﻿using FinanceControlApp.Classes;
+using FinanceControlDAL.Models;
 using FinanceControlDAL.Repos;
 using System;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using FinanceControlApp.Classes;
 
 namespace FinanceControlApp.Forms
 {
@@ -69,7 +69,7 @@ namespace FinanceControlApp.Forms
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form_Load(object sender, EventArgs e)
         {
             var dt = DateTime.Now;
             currMonthLabel.Text = _monthArray[dt.Month - 1] + " " + dt.Year;
@@ -232,7 +232,7 @@ namespace FinanceControlApp.Forms
             {
                 var i = incomeDataGridView.CurrentRow?.DataBoundItem as Income;
                 if (i == null) return;
-                if (MessageBox.Show("Видалити обране поле?", "Видалення", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) ==
+                if (MessageBox.Show(@"Видалити обране поле?", @"Видалення", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) ==
                     DialogResult.OK)
                 {
                     using (var repo = new IncomeRepo())
@@ -245,7 +245,7 @@ namespace FinanceControlApp.Forms
             {
                 var o = outlayDataGridView.CurrentRow?.DataBoundItem as Outlay;
                 if (o == null) return;
-                if (MessageBox.Show("Видалити обране поле?", "Видалення", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) ==
+                if (MessageBox.Show(@"Видалити обране поле?", @"Видалення", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) ==
                     DialogResult.OK)
                 {
                     using (var repo = new OutlayRepo())
@@ -342,11 +342,8 @@ namespace FinanceControlApp.Forms
 
         public void ExportDatabase(object sender, EventArgs e)
         {
-            string path = string.Empty;
-            if (folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                path = folderBrowserDialog1.SelectedPath;
-            }
+            if (folderBrowserDialog1.ShowDialog() != DialogResult.OK) return;
+            var path = folderBrowserDialog1.SelectedPath;
             using (var repo = new AccountRepo())
             {
                 var xEle = new XElement("Accounts",

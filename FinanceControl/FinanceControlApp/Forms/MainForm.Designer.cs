@@ -552,7 +552,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Контроллер фінансів";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.incomeDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.outlayDataGridView)).EndInit();
             this.menuStrip1.ResumeLayout(false);
