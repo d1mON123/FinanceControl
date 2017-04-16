@@ -1,4 +1,4 @@
-﻿namespace FinanceControlApp.Forms.Dictionaries
+﻿namespace FinanceControlApp.Forms
 {
     partial class TypeDictionaryForm
     {

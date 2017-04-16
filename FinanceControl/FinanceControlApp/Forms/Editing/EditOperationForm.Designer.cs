@@ -1,6 +1,6 @@
 ﻿namespace FinanceControlApp.Forms
 {
-    partial class PerformOperationForm
+    partial class EditOperationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -381,7 +381,7 @@
             this.outlayAddButton.UseVisualStyleBackColor = true;
             this.outlayAddButton.Click += new System.EventHandler(this.outlayAddButton_Click);
             // 
-            // PerformOperationForm
+            // EditOperationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -389,7 +389,7 @@
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "PerformOperationForm";
+            this.Name = "EditOperationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додавання операції";
             this.Load += new System.EventHandler(this.Form_Load);

@@ -4,7 +4,7 @@ using System;
 using System.Windows.Forms;
 using Type = FinanceControlDAL.Models.Type;
 
-namespace FinanceControlApp.Forms.Dictionaries
+namespace FinanceControlApp.Forms
 {
     public partial class TypeDictionaryForm : Form, IDictionary
     {

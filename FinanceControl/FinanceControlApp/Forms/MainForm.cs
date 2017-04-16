@@ -8,7 +8,7 @@ using FinanceControlApp.Classes;
 
 namespace FinanceControlApp.Forms
 {
-    public partial class MainForm : Form, ITest
+    public partial class MainForm : Form, IMain
     {
         private int _currentAccount;
 
@@ -26,7 +26,7 @@ namespace FinanceControlApp.Forms
             _currentAccount = 0;
         }
 
-        private void UpdateForm()
+        public void UpdateForm()
         {
             string month = currMonthLabel.Text.Substring(0, (currMonthLabel.Text.Length - 5));
             string year = currMonthLabel.Text.Substring(currMonthLabel.Text.Length - 4);
@@ -123,13 +123,8 @@ namespace FinanceControlApp.Forms
 
             }
         }
-
-        /*private void PrevMonthButton_Click(object sender, EventArgs e)
-        {
-            
-        }*/
-
-        private void NextMonthButton_Click(object sender, EventArgs e)
+       
+        public void NextMonthButton_Click(object sender, EventArgs e)
         {
             string month = currMonthLabel.Text.Substring(0, (currMonthLabel.Text.Length - 5));
             string year = currMonthLabel.Text.Substring(currMonthLabel.Text.Length - 4);
@@ -168,12 +163,12 @@ namespace FinanceControlApp.Forms
             }
         }
 
-        private void IncomeDataGridView_Click(object sender, EventArgs e)
+        public void IncomeDataGridView_Click(object sender, EventArgs e)
         {
             _currentGridView = 1;
         }
 
-        private void IncomeDataGridView_DoubleClick(object sender, EventArgs e)
+        public void IncomeDataGridView_DoubleClick(object sender, EventArgs e)
         {
             var i = incomeDataGridView.CurrentRow?.DataBoundItem as Income;
             if (i == null) return;
@@ -183,12 +178,12 @@ namespace FinanceControlApp.Forms
             }
         }
 
-        private void OutlayDataGridView_Click(object sender, EventArgs e)
+        public void OutlayDataGridView_Click(object sender, EventArgs e)
         {
             _currentGridView = 2;
         }
 
-        private void OutlayDataGridView_DoubleClick(object sender, EventArgs e)
+        public void OutlayDataGridView_DoubleClick(object sender, EventArgs e)
         {
             var o = outlayDataGridView.CurrentRow?.DataBoundItem as Outlay;
             if (o == null) return;
@@ -198,83 +193,42 @@ namespace FinanceControlApp.Forms
             }
         }
 
-        private void додатиToolStripMenuItem_Click(object sender, EventArgs e)
+        public void AddOperation(object sender, EventArgs e)
         {
-            using (var form = new PerformOperationForm())
+            using (var form = new EditOperationForm())
             {
                 if (form.ShowDialog() == DialogResult.OK) UpdateForm();
             }
         }
 
-        private void типToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var form = new EditTypeForm())
-            {
-                if (form.ShowDialog() == DialogResult.OK) UpdateForm();
-            }
-        }
-
-        private void члениСіміToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var form = new EditPersonForm())
-            {
-                if (form.ShowDialog() == DialogResult.OK) UpdateForm();
-            }
-        }
-
-        private void рахункиToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var form = new AccountDictionaryForm())
-            {
-                form.ShowDialog();
-                UpdateForm();
-            }
-        }
-
-        private void поРахункахToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var form = new AccountStatsForm(1))
-            {
-                form.ShowDialog();
-            }
-        }
-
-        private void поРахункахToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            using (var form = new AccountStatsForm(2))
-            {
-                form.ShowDialog();
-            }
-        }
-
-        private void поКатегоріяхToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var form = new TypeStatsForm(1))
-            {
-                form.ShowDialog();
-            }
-        }
-
-        private void поКатегоріяхToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            using (var form = new TypeStatsForm(2))
-            {
-                form.ShowDialog();
-            }
-        }
-
-        private void конвертерВалютToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var form = new ExchangeRateForm())
-            {
-                form.ShowDialog();
-            }
-        }
-
-        private void видалитиToolStripMenuItem_Click(object sender, EventArgs e)
+        public void EditOperation(object sender, EventArgs e)
         {
             if (_currentGridView == 0) return;
-            else if (_currentGridView == 1)
+            if (_currentGridView == 1)
+            {
+                var i = incomeDataGridView.CurrentRow?.DataBoundItem as Income;
+                if (i == null) return;
+                using (var form = new EditOperationForm(i))
+                {
+                    form.ShowDialog();
+                }
+            }
+            else
+            {
+                var o = outlayDataGridView.CurrentRow?.DataBoundItem as Outlay;
+                if (o == null) return;
+                using (var form = new EditOperationForm(o))
+                {
+                    form.ShowDialog();
+                }
+            }
+            UpdateForm();
+        }
+
+        public void DeleteOperation(object sender, EventArgs e)
+        {
+            if (_currentGridView == 0) return;
+            if (_currentGridView == 1)
             {
                 var i = incomeDataGridView.CurrentRow?.DataBoundItem as Income;
                 if (i == null) return;
@@ -303,7 +257,42 @@ namespace FinanceControlApp.Forms
             UpdateForm();
         }
 
-        private void поЧленахСімїToolStripMenuItem_Click(object sender, EventArgs e)
+        public void OpenTypeDictionary(object sender, EventArgs e)
+        {
+            using (var form = new TypeDictionaryForm())
+            {
+                form.ShowDialog();
+                UpdateForm();
+            }
+        }
+
+        public void OpenPersonDictionary(object sender, EventArgs e)
+        {
+            using (var form = new PersonDictionaryForm())
+            {
+                form.ShowDialog();
+                UpdateForm();
+            }
+        }
+
+        public void OpenAccountDictionary(object sender, EventArgs e)
+        {
+            using (var form = new AccountDictionaryForm())
+            {
+                form.ShowDialog();
+                UpdateForm();
+            }
+        }
+
+        public void ShowIncomeStatsByType(object sender, EventArgs e)
+        {
+            using (var form = new TypeStatsForm(1))
+            {
+                form.ShowDialog();
+            }
+        }
+
+        public void ShowIncomeStatsByPerson(object sender, EventArgs e)
         {
             using (var form = new PersonStatsForm(1))
             {
@@ -311,7 +300,23 @@ namespace FinanceControlApp.Forms
             }
         }
 
-        private void поЧленахСімїToolStripMenuItem1_Click(object sender, EventArgs e)
+        public void ShowIncomeStatsByAccount(object sender, EventArgs e)
+        {
+            using (var form = new AccountStatsForm(1))
+            {
+                form.ShowDialog();
+            }
+        }
+
+        public void ShowOutlayStatsByType(object sender, EventArgs e)
+        {
+            using (var form = new TypeStatsForm(2))
+            {
+                form.ShowDialog();
+            }
+        }
+
+        public void ShowOutlayStatsByPerson(object sender, EventArgs e)
         {
             using (var form = new PersonStatsForm(2))
             {
@@ -319,7 +324,23 @@ namespace FinanceControlApp.Forms
             }
         }
 
-        private void експортБазиДаннихToolStripMenuItem_Click(object sender, EventArgs e)
+        public void ShowOutlayStatsByAccount(object sender, EventArgs e)
+        {
+            using (var form = new AccountStatsForm(2))
+            {
+                form.ShowDialog();
+            }
+        }
+
+        public void ShowCurrencyConverter(object sender, EventArgs e)
+        {
+            using (var form = new ExchangeRateForm())
+            {
+                form.ShowDialog();
+            }
+        }
+
+        public void ExportDatabase(object sender, EventArgs e)
         {
             string path = string.Empty;
             if (folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -387,7 +408,5 @@ namespace FinanceControlApp.Forms
                 xEle.Save($"{path}\\outlays.xml");
             }
         }
-
-        
     }
 }

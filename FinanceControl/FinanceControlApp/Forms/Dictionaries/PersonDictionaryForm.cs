@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using FinanceControlDAL.Models;
 using FinanceControlDAL.Repos;
 
-namespace FinanceControlApp.Forms.Dictionaries
+namespace FinanceControlApp.Forms
 {
     public partial class PersonDictionaryForm : Form, IDictionary
     {
